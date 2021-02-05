@@ -43,7 +43,7 @@ def sort(data):
         #kalder mindsteværdien som i
         for data[1] in range(data[0]+1, len(data)):
         #laver en løkke der tjekker elementerne i listen
-            if data[1] < items[mini]:
+            if data[1] < data[mini]:
             #tjekker om værdien er mindre end mindsteværdien
                 mini = data[1]
                 #sætter mindsteværdien til den værdi i
