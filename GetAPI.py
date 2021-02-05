@@ -2,7 +2,7 @@ import requests
 from newsapi import NewsApiClient
 
 
-def GetData():
+def Data():
     #Her hentes dataen fra
     newsapi = NewsApiClient(api_key='652c67837d0f4ab3861ba5ba6c2e55c0')
 
@@ -27,7 +27,7 @@ def GetData():
     print(data)
 
 #Kald functionen GetData
-GetData()
+Data()
 
 #requests commands
 
@@ -36,7 +36,7 @@ GetData()
 #print(dir(r))
 #print(r.content)
 
-def sort(GetData):
+def sort(Data):
     for data[0] in range(len(data)):
     #laver en løkke der tjekker index
         mini = data[0]
