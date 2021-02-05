@@ -1,30 +1,33 @@
 import requests
 from newsapi import NewsApiClient
 
-#Her hentes dataen fra
-newsapi = NewsApiClient(api_key='652c67837d0f4ab3861ba5ba6c2e55c0')
 
-#Søgefeltet for artiklerne
-keyword = input('Indtast et søgeord: ')
+def GetData():
+    #Her hentes dataen fra
+    newsapi = NewsApiClient(api_key='652c67837d0f4ab3861ba5ba6c2e55c0')
 
-#Her hentes alt der indeholder søgeordet, er på engelsk og 20 sider langt.
-data = newsapi.get_everything(q= keyword ,language='en', page_size=20)
+    #Søgefeltet for artiklerne
+    keyword = input('Indtast et søgeord: ')
 
-#Printer statussen for koden, om det fungerer
-print('Status: ' + data['status'])
+    #Her hentes alt der indeholder søgeordet, er på engelsk og 20 sider langt.
+    data = newsapi.get_everything(q= keyword ,language='en', page_size=20)
 
-#Hvor gange ordet er fundet.
-print('Total Results ')
-print(data['totalResults'])
+    #Printer statussen for koden, om det fungerer
+    print('Status: ' + data['status'])
 
-type(data['articles'])
+    #Hvor gange ordet er fundet.
+    print('Total Results ')
+    print(data['totalResults'])
 
-print(data['articles'][0])
+    type(data['articles'])
 
-#Udprintning af dataen
-print(data)
+    print(data['articles'][0])
 
+    #Udprintning af dataen
+    print(data)
 
+#Kald functionen GetData
+GetData()
 
 #requests commands
 
