@@ -36,7 +36,7 @@ GetData()
 #print(dir(r))
 #print(r.content)
 
-def sort(data):
+def sort(GetData):
     for data[0] in range(len(data)):
     #laver en løkke der tjekker index
         mini = data[0]
@@ -51,3 +51,5 @@ def sort(data):
         data[0], data[mini] = data[mini], data[0]
         #mindsteværdien bytter plads med første værdi i den usorterede række
     return data
+
+    print(data)
