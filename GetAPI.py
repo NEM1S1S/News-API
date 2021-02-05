@@ -36,4 +36,18 @@ GetData()
 #print(dir(r))
 #print(r.content)
 
-    def sort():
+    def sort(data):	    def sort():
+    for data[0] in range(len(data)):
+    #laver en løkke der tjekker index
+        mini = data[0]
+        #kalder mindsteværdien som i
+        for data[1] in range(data[0]+1, len(data)):
+        #laver en løkke der tjekker elementerne i listen
+            if data[1] < data[mini]:
+            #tjekker om værdien er mindre end mindsteværdien
+                mini = data[1]
+                #sætter mindsteværdien til den værdi i
+                #tilfælde af at den er mindre
+        data[0], data[mini] = data[mini], data[0]
+        #mindsteværdien bytter plads med første værdi i den usorterede række
+    return data
