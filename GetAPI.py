@@ -1,6 +1,6 @@
+import json
 import requests
 from newsapi import NewsApiClient
-
 
 def Data():
     #Her hentes dataen fra
@@ -12,19 +12,10 @@ def Data():
     #Her hentes alt der indeholder søgeordet, er på engelsk og 20 sider langt.
     data = newsapi.get_everything(q= keyword ,language='en', page_size=20)
 
-    #Printer statussen for koden, om det fungerer
-    print('Status: ' + data['status'])
-
-    #Hvor gange ordet er fundet.
-    print('Total Results ')
-    print(data['totalResults'])
-
-    type(data['articles'])
-
-    print(data['articles'][0])
+    data_sort = json.dumps(data, indent=2)
 
     #Udprintning af dataen
-    print(data)
+    print(data_sort)
 
 #Kald functionen GetData
 Data()
