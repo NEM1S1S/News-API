@@ -36,7 +36,6 @@ Data()
 #print(dir(r))
 #print(r.content)
 
-def sort(Data):
     for data[0] in range(len(data)):
     #laver en løkke der tjekker index
         mini = data[0]
