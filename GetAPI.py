@@ -1,6 +1,6 @@
-import json
 import requests
 from newsapi import NewsApiClient
+
 
 def Data():
     #Her hentes dataen fra
@@ -12,10 +12,19 @@ def Data():
     #Her hentes alt der indeholder søgeordet, er på engelsk og 20 sider langt.
     data = newsapi.get_everything(q= keyword ,language='en', page_size=20)
 
-    data_sort = json.dumps(data, indent=2)
+    #Printer statussen for koden, om det fungerer
+    print('Status: ' + data['status'])
+
+    #Hvor gange ordet er fundet.
+    print('Total Results ')
+    print(data['totalResults'])
+
+    type(data['articles'])
+
+    print(data['articles'][0])
 
     #Udprintning af dataen
-    print(data_sort)
+    print(data)
 
 #Kald functionen GetData
 Data()
@@ -26,21 +35,6 @@ Data()
 
 #print(dir(r))
 #print(r.content)
+data = [data()]
 
-def sort(Data):
-    for data[0] in range(len(data)):
-    #laver en løkke der tjekker index
-        mini = data[0]
-        #kalder mindsteværdien som i
-        for data[1] in range(data[0]+1, len(data)):
-        #laver en løkke der tjekker elementerne i listen
-            if data[1] < data[mini]:
-            #tjekker om værdien er mindre end mindsteværdien
-                mini = data[1]
-                #sætter mindsteværdien til den værdi i
-                #tilfælde af at den er mindre
-        data[0], data[mini] = data[mini], data[0]
-        #mindsteværdien bytter plads med første værdi i den usorterede række
-    return data
-
-    print(data)
+Data.sort()
