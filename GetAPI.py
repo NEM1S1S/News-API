@@ -15,7 +15,7 @@ def UI():
     menuInput = ''
     while menuInput != 'exit':
         #Søgefeltet for artiklerne
-        keywords = input('Indtast et søgeord: ')
+        keywords = input('Indtast dine søgeord: ')
         #Kald functionen GetData
         theData = getData(keywords)
 
@@ -26,10 +26,7 @@ def UI():
         print('Total Results ')
         print(theData['totalResults'])
 
-        type(theData['articles'])
-
         #Udprintning af dataen
-
         print(theData)
 
         menuInput = input('skriv "exit" for at afslutte, ENTER for at søge igen.')
