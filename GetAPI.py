@@ -11,27 +11,30 @@ def getData(keywords):
 
     return data
 
-menuInput = ''
-while menuInput != 'exit':
-    #Søgefeltet for artiklerne
-    keywords = input('Indtast et søgeord: ')
-    #Kald functionen GetData
-    theData = getData(keywords)
+def UI():
+    menuInput = ''
+    while menuInput != 'exit':
+        #Søgefeltet for artiklerne
+        keywords = input('Indtast et søgeord: ')
+        #Kald functionen GetData
+        theData = getData(keywords)
 
-    #Printer statussen for koden, om det fungerer
-    print('Status: ' + theData['status'])
+        #Printer statussen for koden, om det fungerer
+        print('Status: ' + theData['status'])
 
-    #Hvor gange ordet er fundet.
-    print('Total Results ')
-    print(theData['totalResults'])
+        #Hvor gange ordet er fundet.
+        print('Total Results ')
+        print(theData['totalResults'])
 
-    type(theData['articles'])
+        type(theData['articles'])
 
-    #Udprintning af dataen
-    print(theData)
+        #Udprintning af dataen
 
-    menuInput = input('skriv "exit" for at afslutte, ENTER for at søge igen.')
+        print(theData)
 
+        menuInput = input('skriv "exit" for at afslutte, ENTER for at søge igen.')
+
+UI()
 #requests commands
 
 #r = requests.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=652c67837d0f4ab3861ba5ba6c2e55c0')
