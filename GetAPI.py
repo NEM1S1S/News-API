@@ -30,15 +30,3 @@ def UI():
         menuInput = input('skriv "exit" for at afslutte, ENTER for at søge igen.')
 
 UI()
-#requests commands
-
-#r = requests.get('https://newsapi.org/v2/everything?q=bitcoin&apiKey=652c67837d0f4ab3861ba5ba6c2e55c0')
-
-#print(dir(r))
-#print(r.content)
-def Unitest():
-    assert sum(getData) == theData, 'burde komme en liste af 100 artikler'
-
-if __name__ == '__main__':
-    test_sum()
-    print('alt nåede igennem')
