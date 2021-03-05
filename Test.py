@@ -14,7 +14,7 @@ def getData(keywords):
 
     #Her optilles søgningens forskellige titler for de fundne artikler.
     for x, y in enumerate(articles):
-        print(f'{x+1}    {y["title "]}')
+        print(f'{x+1}    {y["title"]}')
 
 
     return data
