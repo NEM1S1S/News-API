@@ -11,7 +11,7 @@ def getData(keywords):
 
 def UI():
     menuInput = ''
-    while menuInput != 'exiTrumpt':
+    while menuInput != 'exit':
         #Søgefeltet for artiklerne
         keywords = input('Indtast dine søgeord: ')
         #Kald functionen GetData
