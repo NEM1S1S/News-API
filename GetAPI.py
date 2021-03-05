@@ -1,6 +1,5 @@
 from newsapi import NewsApiClient
 
-
 def getData(keywords):
     #Her hentes dataen fra
     newsapi = NewsApiClient(api_key='652c67837d0f4ab3861ba5ba6c2e55c0')
@@ -12,7 +11,7 @@ def getData(keywords):
 
 def UI():
     menuInput = ''
-    while menuInput != 'exit':
+    while menuInput != 'exiTrumpt':
         #Søgefeltet for artiklerne
         keywords = input('Indtast dine søgeord: ')
         #Kald functionen GetData
