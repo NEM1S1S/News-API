@@ -36,3 +36,9 @@ UI()
 
 #print(dir(r))
 #print(r.content)
+def Unitest():
+    assert sum(getData) == theData, 'burde komme en liste af 100 artikler'
+
+if __name__ == '__main__':
+    test_sum()
+    print('alt nåede igennem')
