@@ -13,8 +13,8 @@ def getData(keywords):
     articles = data['articles']
 
     #Her optilles søgningens forskellige titler for de fundne artikler.
-    for x, y in enumerate(articles):
-        print(f'{x+1}    {y["title"]}')
+    for x, y, z in enumerate(articles):
+        print(f'{x+1}    {y["title"]}    {z["author"]}')
 
 
     return data

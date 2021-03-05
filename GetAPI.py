@@ -1,4 +1,3 @@
-import requests
 from newsapi import NewsApiClient
 
 
